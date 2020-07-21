@@ -1,4 +1,4 @@
-package com.lx.gaomap;
+package com.lx.gaomap.common;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,8 +20,10 @@ import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
+import com.lx.gaomap.R;
 import com.lx.gaomap.utils.AppUtils;
 import com.lx.gaomap.utils.ShareUtils;
+import com.lx.gaomap.video.ShiPinActivity;
 
 public class MainActivity extends AppCompatActivity implements AMapLocationListener {
 
@@ -53,6 +55,15 @@ public class MainActivity extends AppCompatActivity implements AMapLocationListe
                 new ShareUtils(MainActivity.this).share("https://www.baidu.com", AppUtils.getAppName(MainActivity.this), "欢迎使用", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595249183915&di=a3fdc0d55231e6c4223058f248735e3d&imgtype=0&src=http%3A%2F%2Ft8.baidu.com%2Fit%2Fu%3D1484500186%2C1503043093%26fm%3D79%26app%3D86%26f%3DJPEG%3Fw%3D1280%26h%3D853");
             }
         });
+
+        tv3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ShiPinActivity.class));
+            }
+        });
+
+        tv3.setText(AppUtils.changTVsize("5.39"));
 
     }
 

@@ -1,4 +1,4 @@
-package com.lx.gaomap;
+package com.lx.gaomap.common;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,16 +7,20 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.amap.api.services.help.Tip;
+
+import com.amap.api.services.core.PoiItem;
+import com.lx.gaomap.R;
 
 import java.util.List;
 
-
-public class HintAddressAdapter extends BaseAdapter {
+/**
+ * Created by kxn on 2019/6/11 0011.
+ */
+public class PoiAdapter extends BaseAdapter {
     Context context;
-    List<Tip> list;
+    List<PoiItem> list;
 
-    public HintAddressAdapter(Context context, List<Tip> list) {
+    public PoiAdapter(Context context, List<PoiItem> list) {
         this.context = context;
         this.list = list;
     }
@@ -49,8 +53,8 @@ public class HintAddressAdapter extends BaseAdapter {
             holder = ((ViewHolder) view.getTag());
         }
 
-        holder.tvName.setText(list.get(i).getName());
-        holder.tvAddress.setText(list.get(i).getAddress());
+        holder.tvName.setText(list.get(i).getTitle());
+        holder.tvAddress.setText(list.get(i).getSnippet());
         return view;
     }
 
@@ -59,3 +63,4 @@ public class HintAddressAdapter extends BaseAdapter {
     }
 
 }
+

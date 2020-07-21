@@ -1,4 +1,4 @@
-package com.lx.gaomap;
+package com.lx.gaomap.common;
 
 import android.app.Activity;
 import android.content.Context;

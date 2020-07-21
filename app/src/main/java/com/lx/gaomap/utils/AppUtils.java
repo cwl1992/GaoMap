@@ -7,11 +7,32 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.RelativeSizeSpan;
 
 /*
 * https://blog.csdn.net/jia635/article/details/78722073
 * */
 public class AppUtils {
+
+
+    /**
+     * 小数点前后大小不一致
+     *
+     * @param value
+     * @return
+     */
+    //3.98
+    public static SpannableString changTVsize(String value) {
+        SpannableString spannableString = new SpannableString(value);
+        if (value.contains(".")) {
+            spannableString.setSpan(new RelativeSizeSpan(0.8f), value.indexOf("."), value.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+        return spannableString;
+    }
+
+
 
     /**
      * 获取应用程序名称

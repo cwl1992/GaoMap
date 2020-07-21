@@ -1,4 +1,4 @@
-package com.lx.gaomap;
+package com.lx.gaomap.common;
 
 import android.app.Application;
 import android.content.Context;
@@ -6,6 +6,7 @@ import android.util.Log;
 
 import androidx.multidex.MultiDex;
 
+import com.lx.gaomap.R;
 import com.lx.gaomap.utils.AppUtils;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".common.MainActivity">
 
     <TextView
         android:id="@+id/tv1"
@@ -19,13 +19,18 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:gravity="center"
-        android:text="" />
+        android:text="选择" />
 
     <TextView
         android:id="@+id/tv3"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:textColor="#f00"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="选择" />
 
     <WebView
         android:id="@+id/webView"

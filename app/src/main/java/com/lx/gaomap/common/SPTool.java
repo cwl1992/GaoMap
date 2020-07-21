@@ -1,4 +1,4 @@
-package com.lx.gaomap;
+package com.lx.gaomap.common;
 
 
 import android.annotation.SuppressLint;
